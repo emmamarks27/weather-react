@@ -1,0 +1,102 @@
+.App {
+  font-family: sans-serif;
+}
+
+.container {
+  display: block;
+  margin: 52px auto 0;
+  max-width: 600px;
+  padding: 14px 36px 23px;
+  border: solid black 7px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px black;
+}
+
+header {
+  padding-bottom: 10px;
+  text-align: right;
+  font-size: 10px;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  transition: auto 300ms;
+  font-size: 22px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  font-size: 10px;
+}
+
+h2 {
+  padding-bottom: none;
+  text-align: center;
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 10px;
+  padding-bottom: 10px;
+}
+
+ul {
+  text-align: left;
+}
+
+#weather-conditions {
+  text-transform: capitalize;
+}
+
+.row-one {
+  padding-bottom: 0px;
+  margin-bottom: 0;
+}
+
+.col-3.today-weather-location,
+.col-3.today-weather-forecast,
+.col-3 .weather-near-me {
+  border-right: solid 5px grey;
+}
+
+.card-text.five-day-forecast {
+  color: #48484a;
+}
+
+.card {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.card:hover {
+  background-color: #7fa4e8;
+}
+
+.row-three {
+  margin: 50px 0 10px;
+}
+
+.search-bar-city {
+  margin-top: 50px;
+}
+
+#local {
+  margin-top: 10px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.container.footnote {
+  border: none;
+  box-shadow: none;
+  text-align: left;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.container.footnote h5 {
+  font-size: 12px;
+  font-weight: 300;
+}

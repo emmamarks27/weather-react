@@ -1,0 +1,13 @@
+#today-weather {
+  font-size: 12px;
+  position: relative;
+  left: 3px;
+}
+
+.card {
+  margin-top: 0;
+}
+
+.card-body {
+  padding: 0.5em;
+}

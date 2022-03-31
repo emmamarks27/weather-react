@@ -1,0 +1,18 @@
+#local {
+  font-size: 10px;
+}
+
+#local.btn {
+  background-color: white;
+  border: solid 1px #ced4da;
+  padding: 10px;
+  color: black;
+  line-height: 1;
+  text-align: center;
+}
+
+#local.btn:hover {
+  background-color: #7fa4e8;
+  border: solid 1px #7fa4e8;
+  color: white;
+}
