@@ -50,7 +50,16 @@ export default function App() {
       </div>
 
       <div className="container footnote">
-        <h5>Coded by: Emma Marks</h5>
+        <h5>
+          Coded by:{" "}
+          <a
+            href="https://github.com/emmamarks27/weather-react"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Emma Marks
+          </a>
+        </h5>
       </div>
 
       <script src="src/java.js"></script>
