@@ -100,3 +100,61 @@ ul {
   font-size: 12px;
   font-weight: 300;
 }
+
+#today-weather {
+  font-size: 12px;
+  position: relative;
+  left: 3px;
+}
+
+.card {
+  margin-top: 0;
+}
+
+.card-body {
+  padding: 0.5em;
+}
+
+#searched-city {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.search-form {
+  max-width: 400px;
+  display: block;
+  margin: 10px auto 0;
+  font-size: 12px;
+}
+
+.search-form .btn-primary {
+  background-color: white;
+  border: solid 1px #ced4da;
+  padding: 10px 45px 10px 10px;
+  font-size: 10px;
+  color: black;
+  line-height: 1;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #7fa4e8;
+  border: solid 1px #7fa4e8;
+  color: white;
+}
+
+#search-engine {
+  line-height: 1;
+}
+
+.form-control#search-engine {
+  max-width: 90%;
+  position: relative;
+  right: -50px;
+}
+
+.label {
+  font-size: 10px;
+  text-align: center;
+}
