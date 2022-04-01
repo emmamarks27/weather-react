@@ -2,7 +2,6 @@ import React from "react";
 import "./WeatherTodayIcon.css";
 
 export default function WeatherTodayIcon(props) {
-  console.log(props.icon);
   let url = `http://openweathermap.org/img/wn/${props.icon}@2x.png`;
   return (
     <div>

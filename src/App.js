@@ -14,6 +14,7 @@ export default function App() {
     ready: false,
     name: null,
     icon: null,
+    date: null,
   });
 
   function handleSearch(event) {
@@ -35,6 +36,7 @@ export default function App() {
       ready: true,
       name: response.data.name,
       icon: response.data.weather[0].icon,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -45,34 +47,50 @@ export default function App() {
 
   if (weatherData.ready) {
     return (
-      <div>
-        <WeatherInfo data={weatherData} />
+      <div className="App">
+        <div className="container">
+          <div>
+            <WeatherInfo data={weatherData} />
 
-        <form onSubmit={handleSubmit} className="search-form">
-          <div className="row">
-            <label htmlFor="search-engine" className="label">
-              Search for another city
-            </label>
-          </div>
-          <div className="row">
-            <div className="col-10">
-              <input
-                onChange={handleSearch}
-                type="text"
-                className="form-control"
-                id="search-engine"
-              />
-            </div>
+            <form onSubmit={handleSubmit} className="search-form">
+              <div className="row">
+                <label htmlFor="search-engine" className="label">
+                  Search for another city
+                </label>
+              </div>
+              <div className="row">
+                <div className="col-10">
+                  <input
+                    onChange={handleSearch}
+                    type="text"
+                    className="form-control"
+                    id="search-engine"
+                  />
+                </div>
 
-            <div className="col-2">
-              <input
-                type="submit"
-                value="search"
-                className="form-control btn btn-primary"
-              />
-            </div>
+                <div className="col-2">
+                  <input
+                    type="submit"
+                    value="search"
+                    className="form-control btn btn-primary"
+                  />
+                </div>
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
+        <div className="container footnote">
+          <h5>
+            Coded by:{" "}
+            <a
+              href="https://github.com/emmamarks27/weather-react"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Emma Marks
+            </a>
+          </h5>
+        </div>
       </div>
     );
   } else {
