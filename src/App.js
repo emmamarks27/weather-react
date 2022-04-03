@@ -37,7 +37,9 @@ export default function App() {
       name: response.data.name,
       icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
+      coords: response.data.coord,
     });
+    console.log(response.data);
   }
 
   function handleSubmit(event) {

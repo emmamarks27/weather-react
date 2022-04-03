@@ -33,13 +33,12 @@ export default function WeatherInfo(props) {
           <div className="card">
             <div className="card-body">
               <h5 className="card-title">Today</h5>
-              <span className="card-text"></span>
               <div id="today-weather">{Math.round(props.data.temp)}°C</div>
               <WeatherTodayIcon icon={props.data.icon} />
             </div>
           </div>
         </div>
-        <WeatherForecast />
+        <WeatherForecast coords={props.data.coords} />
       </div>
 
       <WeatherNearMe />
