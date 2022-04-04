@@ -10,5 +10,5 @@ export default function DateTime(props) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `The time is ${hours}:${minutes} on ${days[day]}`;
+  return `Last updated at: ${hours}${minutes} on ${days[day]}`;
 }
