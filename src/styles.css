@@ -5,7 +5,7 @@
 .container {
   display: block;
   margin: 52px auto 0;
-  max-width: 600px;
+  max-width: 680px;
   padding: 14px 36px 23px;
   border: solid black 7px;
   border-radius: 3px;
@@ -58,7 +58,7 @@ ul {
 .col-3.today-weather-location,
 .col-3.today-weather-forecast,
 .col-3 .weather-near-me {
-  border-right: solid 5px grey;
+  border-right: solid 3px grey;
 }
 
 .card-text.five-day-forecast {

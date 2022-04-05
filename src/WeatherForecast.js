@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./weatherforecast.css";
-import WeatherTodayIcon from "./WeatherTodayIcon";
-import ForecastDayFormat from "./ForecastDayFormat";
+import ForecastDay from "./ForecastDay";
 
 export default function WeatherForecast(props) {
-  let [forecastTemp, setForecast] = useState({
-    mintemp: null,
-    maxtemp: null,
-    date: null,
-    icon: null,
-    ready: false,
-  });
+  let [ready, setReady] = useState(false);
+  let [forecastTemp, setForecast] = useState(null);
 
   function search() {
     let apiKey = "6058dab818729bfcd7473650aa63148c";
@@ -25,42 +19,20 @@ export default function WeatherForecast(props) {
   }
 
   function handleResponse(response) {
-    console.log(response.data.daily[1].temp.min);
-    console.log(response.data);
-    setForecast({
-      mintemp: response.data.daily[1].temp.min,
-      maxtemp: response.data.daily[1].temp.max,
-      date: new Date(response.data.daily[1].dt * 1000),
-      icon: response.data.daily[1].weather[0].icon,
-      ready: true,
-    });
+    setForecast(response.data.daily);
+    setReady(true);
   }
 
-  if (forecastTemp.ready) {
-    return (
-      <div className="col-9 w-90">
-        <div className="row">
-          <div className="card">
-            <div className="card-body">
-              <div className="card-title">
-                <h5>
-                  <ForecastDayFormat timestamp={forecastTemp.date} />
-                </h5>
-              </div>
-              <div className="temperatures">
-                <span className="max-temp">
-                  {Math.round(forecastTemp.maxtemp)}°
-                </span>{" "}
-                <span className="min-temp">
-                  {Math.round(forecastTemp.mintemp)}°
-                </span>
-              </div>
-              <WeatherTodayIcon icon={forecastTemp.icon} />
-            </div>
+  if (ready) {
+    return forecastTemp.map(function (dailyForecast, index) {
+      if (index > 0 && index < 6) {
+        return (
+          <div class="col" key={index}>
+            <ForecastDay data={dailyForecast} />
           </div>
-        </div>
-      </div>
-    );
+        );
+      }
+    });
   } else {
     search();
     return "Not working from forecast!";

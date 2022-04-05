@@ -40,8 +40,6 @@ export default function WeatherInfo(props) {
         </div>
         <WeatherForecast coords={props.data.coords} />
       </div>
-
-      <WeatherNearMe />
     </div>
   );
 }
